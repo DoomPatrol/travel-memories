@@ -10,7 +10,6 @@ function initAutocomplete() {
 
 function completeCity(){
   let place = autocomplete.getPlace();
-  console.log(place);
   $(input).val(place.formatted_address);
   $('#id_lat').val(parseFloat(place.geometry.location.lat().toFixed(6)));
   $('#id_lng').val(parseFloat(place.geometry.location.lng().toFixed(6)));

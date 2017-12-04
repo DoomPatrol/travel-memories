@@ -77,8 +77,6 @@ var options = {
 function initMap(){
   var master_object = {};
   var mapData = window.mapData;
-  console.log('map data', mapData);
-  console.log('map running');
   var map = new google.maps.Map(document.getElementById('map'), options);
 
   let infowindow = new google.maps.InfoWindow()

@@ -40,7 +40,8 @@
           <div class="card-inner">
             <h4>{{item.title}}</h4>
             <p>{{item.note}}</p>
-            <p class="card-meta"><em>Written {{item.created_at|naturaltime}}</em></p>
+            <p class="card-meta float-left"><em>Written {{item.created_at|naturaltime}}</em></p>
+            <span class="float-right"><a href="{% url 'edit-location' item.pk %}">Edit</a> | <a href="{% url 'delete-location' item.pk %}">Delete</a></span>
           </div>
         </div>
       </div>

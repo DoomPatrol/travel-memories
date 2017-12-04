@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="header-text header-spacing">Edit memory</h1>
+        <p>If you would like to edit the location, use the location field to search and we will automatically update the latitude and longitude. If you just want to edit the note, simply edit the field below and click update.</p>
+        <form action="" class="location-form" method="post">{% csrf_token %}
+          <label for="location-input">Location</label>
+          <input id="location-input" type="text" placeholder="Enter a location">
+          {{ form.as_p }}
+          <input type="submit" class="btn btn-orange" value="Update" />
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/mapautocomplete.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWczeTkcqpAGH6qkjn--Z6QR5ghunG7h4&libraries=places&callback=initAutocomplete"> </script>
+{% endblock %}
