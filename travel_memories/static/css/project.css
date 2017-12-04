@@ -32,6 +32,25 @@
 .location-form textarea {
   width: 100%;
 }
+.card-margin {
+  margin: 10px 0;
+}
+.memory-card {
+  background: #FFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+  transition: 0.3s;
+  margin: 5px;
+}
+.memory-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.memory-card .card-inner {
+  padding: 3%;
+}
+.memory-card .card-meta {
+  font-size: .5rem;
+}
 #map {
   min-height: 600px;
   max-height: 600px;
@@ -122,4 +141,11 @@ a:hover {
   background: #e88565;
   color: #FFF;
   text-decoration: none;
+}
+/* COLOR CHANGES */
+.bg-orange {
+  background: #e88565;
+}
+.white-text {
+  color: #FFF;
 }

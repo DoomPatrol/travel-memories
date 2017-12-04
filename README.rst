@@ -13,6 +13,9 @@ Getting Up and Running Locally
 5. Your database likely needs credentials, which you should now add to the ``DATABASES`` setting in config/settings/base.py
 6. Next Run ``python manage.py migrate`` to run all of the model migrations
 7. Finally, run ``python manage.py runserver`` and your local host should be up and running
+8. Also run ``python manage.py createsuperuser`` if you would like to create an admin account right away
+
+Once you have your server running, create as many profiles as you would like to get test data into the database.
 
 Notes
 =====
