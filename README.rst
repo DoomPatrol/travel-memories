@@ -1,6 +1,8 @@
 Travel Memories
 Store and share the favorite things you did as you travel.
 
+.. image:: https://i.imgur.com/P3GEXSC.png
+
 Getting Up and Running Locally
 =============
 
