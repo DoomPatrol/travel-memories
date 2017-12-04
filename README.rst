@@ -4,13 +4,13 @@ Store and share the favorite things you did as you travel.
 Getting Up and Running Locally
 =============
 
-Clone this repo by either running `git clone https://github.com/DoomPatrol/travel-memories.git` or downloading as a zip file in the upper right
-Create a virtual environment with your preferred package (I prefer [virtualenv](https://virtualenv.pypa.io/en/stable/))
-Run `pip install -r requirements/local.txt` to install all of the dependencies
-Next you will need to create your database. This projects uses Postgres, so you will need to install that first if you don't already have it. Once you know Postgres is installed run `createdb travel_memories`. 
-Your database likely needs credentials, which you should now add to the `DATABASES` setting in config/settings/base.py
-Next Run `python manage.py migrate` to run all of the model migrations
-Finally, run `python manage.py runserver` and your local host should be up and running
+1. Clone this repo by either running ``git clone https://github.com/DoomPatrol/travel-memories.git`` or downloading as a zip file in the upper right
+2. Create a virtual environment with your preferred package. I personally prefer virtualenv (https://virtualenv.pypa.io/en/stable/)
+3. Run ``pip install -r requirements/local.txt`` to install all of the dependencies
+4. Next you will need to create your database. This projects uses Postgres, so you will need to install that first if you don't already have it. Once you know Postgres is installed run ``createdb travel_memories``. 
+5. Your database likely needs credentials, which you should now add to the ``DATABASES`` setting in config/settings/base.py
+6. Next Run ``python manage.py migrate`` to run all of the model migrations
+7. Finally, run ``python manage.py runserver`` and your local host should be up and running
 
 Notes
 =====
