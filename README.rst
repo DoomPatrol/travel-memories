@@ -1,77 +1,20 @@
-travel_memories
+Travel Memories
 ===============
+![Cookiecutter Django Badge](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg)
+Store and share the favorite things you did as you travel.
 
-Store the favorite things you did as you travel.
+Getting Up and Running Locally
+=============
 
-.. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
+ 1. Clone this repo by either running `git clone https://github.com/DoomPatrol/travel-memories.git` or downloading as a zip file in the upper right
+ 2. Create a virtual environment with your preferred package (I prefer [virtualenv](https://virtualenv.pypa.io/en/stable/))
+ 3. Run `pip install -r requirements/local.txt` to install all of the dependencies
+ 4. Next you will need to create your database. This projects uses Postgres, so you will need to install that first if you don't already have it. Once you know Postgres is installed run `createdb travel_memories`. 
+ 5. Your database likely needs credentials, which you should now add to the `DATABASES` setting in config/settings/base.py
+ 6. Next Run `python manage.py migrate` to run all of the model migrations
+ 7. Finally, run `python manage.py runserver` and your local host should be up and running
 
+Notes
+=====
 
-:License: MIT
-
-
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
-
-Basic Commands
---------------
-
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
-
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
-* To create an **superuser account**, use this command::
-
-    $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
-
-    $ coverage run manage.py test
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ py.test
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
-Heroku
-^^^^^^
-
-See detailed `cookiecutter-django Heroku documentation`_.
-
-.. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
-
-
-
-
+ - When you create an account locally, it asks to confirm your email. When dev mode, it sends the "email" to the console, where you can get the link you need to confirm your email
