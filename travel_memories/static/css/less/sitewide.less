@@ -1,0 +1,61 @@
+//main: main.less
+.header-text {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-spacing {
+  padding: 2rem 0;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+@media @smartphones, @tablet {
+  .nav-item {
+    .nav-link {
+      border-bottom: none;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}
+.navbar-brand {
+  border-bottom: none;
+  &:hover {
+    background: none;
+  }
+  img {
+    max-height: 30px;
+    width: auto;
+  }
+}
+
+form {
+  input, textarea {
+    transition: all .5s;
+    border-radius: 0 !important;
+    border: 2px solid @orange !important;
+
+    &:focus {
+      outline: none;
+      border-color: @orange !important;
+      box-shadow: 0 0 0 0.2rem @orange !important;
+    }
+  }
+}
+
+a {
+  transition: all .5s;
+  border-bottom: 2px solid @orange;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  &:hover {
+    background: @orange;
+    color: @white;
+    text-decoration: none;
+  }
+}

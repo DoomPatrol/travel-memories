@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="header-text header-spacing">Create a new memory</h1>
+        <p>Simply start typing your location, select from the list, and we will take care of latitude and longitude.</p>
+        <form action="" class="location-form" method="post">{% csrf_token %}
+          <label for="location-input">Location</label>
+          <input id="location-input" type="text" placeholder="Enter a location" required>
+          {{ form.as_p }}
+          <input type="submit" class="btn btn-orange" value="Save" />
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/mapautocomplete.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWczeTkcqpAGH6qkjn--Z6QR5ghunG7h4&libraries=places&callback=initAutocomplete"> </script>
+{% endblock %}

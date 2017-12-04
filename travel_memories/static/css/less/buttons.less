@@ -1,0 +1,31 @@
+//main: main.less
+[class^="btn-"] {
+  transition: all 0.5s ease;
+  &:hover {
+      cursor: pointer;
+  }
+}
+
+.btn-white {
+  background-color: @white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  color: @black !important;
+  &:hover {
+      background-color: darken(@white,5%) !important;
+      color: @black !important;
+  }
+}
+
+.btn-orange {
+  background-color: @orange;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  color: @white !important;
+  &:hover {
+      background-color: darken(@orange,5%) !important;
+      color: @white !important;
+  }
+}

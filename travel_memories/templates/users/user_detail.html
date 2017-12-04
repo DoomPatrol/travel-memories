@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}User: {{ object.username }}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Welcome back, {{ object.username }}</h1>
+      <a href="{% url 'add-location' %}" class="btn btn-orange">Add a new memory</a>
+      <a href="{% url 'account_email' %}"  class="btn btn-orange">Edit Email</a>
+    </div>
+    <div class="col-md-6">
+      {% with locations|first as first %}
+      <h4 class="header-spacing">You have logged {{locations.count}} memories total, with your last one being {{first.created_at|naturaltime}}</h4>
+      {% endwith %}
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <div id="map">
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<!-- not optimal way of doing things. If I were to improve, 
+  would have a better way of transferring data from Django to JS --> 
+<script>
+  // Loading the data for use in JS components here
+  (function () {
+      window.mapData = {{ map_data|safe }};
+  }());
+</script>
+
+
+<script src="{% static 'js/maps.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWczeTkcqpAGH6qkjn--Z6QR5ghunG7h4&callback=initMap"> </script>
+{% endblock %}
+

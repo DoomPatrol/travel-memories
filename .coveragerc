@@ -1,0 +1,5 @@
+[run]
+include = travel_memories/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

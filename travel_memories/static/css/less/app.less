@@ -1,0 +1,52 @@
+//main: main.less
+
+.hero {
+  background-color: @orange;
+  color: @white;
+
+  .btn {
+    margin-right: 20px;
+  }
+
+  .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .hero-inner {
+    padding: 5% 3%;
+  }
+
+  .hero-image {
+    height: 100%;
+    position: relative;
+    background: url('../images/travel.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  @media @smartphones, @tablet{
+    .hero-image {
+      min-height: 20vh;
+    }
+  }
+}
+
+.location-form {
+  input, textarea {
+    width: 100%;
+  }
+}
+#map {
+  min-height: 600px;
+  max-height: 600px;
+  width: auto;
+  @media @smartphones, @tablet {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}

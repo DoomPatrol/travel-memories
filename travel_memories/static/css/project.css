@@ -1,0 +1,125 @@
+.hero {
+  background-color: #e88565;
+  color: #FFF;
+}
+.hero .btn {
+  margin-right: 20px;
+}
+.hero .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.hero h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero .hero-inner {
+  padding: 5% 3%;
+}
+.hero .hero-image {
+  height: 100%;
+  position: relative;
+  background: url('../images/travel.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 479px), only screen and (max-width: 768px) {
+  .hero .hero-image {
+    min-height: 20vh;
+  }
+}
+.location-form input,
+.location-form textarea {
+  width: 100%;
+}
+#map {
+  min-height: 600px;
+  max-height: 600px;
+  width: auto;
+}
+@media only screen and (max-width: 479px), only screen and (max-width: 768px) {
+  #map {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}
+[class^="btn-"] {
+  transition: all 0.5s ease;
+}
+[class^="btn-"]:hover {
+  cursor: pointer;
+}
+.btn-white {
+  background-color: #FFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  color: #4A4A4A !important;
+}
+.btn-white:hover {
+  background-color: #f2f2f2 !important;
+  color: #4A4A4A !important;
+}
+.btn-orange {
+  background-color: #e88565;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  color: #FFF !important;
+}
+.btn-orange:hover {
+  background-color: #e5734f !important;
+  color: #FFF !important;
+}
+.header-text {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.header-spacing {
+  padding: 2rem 0;
+}
+.nav-item {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 479px), only screen and (max-width: 768px) {
+  .nav-item .nav-link {
+    border-bottom: none;
+  }
+  .nav-item .nav-link:hover {
+    border-bottom: none;
+  }
+}
+.navbar-brand {
+  border-bottom: none;
+}
+.navbar-brand:hover {
+  background: none;
+}
+.navbar-brand img {
+  max-height: 30px;
+  width: auto;
+}
+form input,
+form textarea {
+  transition: all .5s;
+  border-radius: 0 !important;
+  border: 2px solid #e88565 !important;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #e88565 !important;
+  box-shadow: 0 0 0 0.2rem #e88565 !important;
+}
+a {
+  transition: all .5s;
+  border-bottom: 2px solid #e88565;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+a:hover {
+  background: #e88565;
+  color: #FFF;
+  text-decoration: none;
+}
